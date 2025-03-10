@@ -1,16 +1,13 @@
 package com.example.OrderService.services;
-import static org.mockito.Mockito.*;
 import com.example.OrderService.models.Order;
 import com.example.OrderService.repositories.OrderRepository;
-import com.example.OrderService.util.OrderNotFoundException;
+import com.example.OrderService.errors.OrderNotFoundException;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(MockitoExtension.class)

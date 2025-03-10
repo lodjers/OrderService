@@ -30,7 +30,7 @@ public class OrderController {
         if (bindingResult.hasErrors()) {
             ErrorsUtil.returnErrorsToClient(bindingResult);
         }
-       userServiceClient.findByUserId(orderDTO.getPersonId());
+        userServiceClient.findByUserId(orderDTO.getPersonId());
         orderService.register(modelMapper.map(orderDTO, Order.class));
         return ResponseEntity.status(HttpStatus.CREATED).body("Заказ зарегистрирован");
     }

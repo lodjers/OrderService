@@ -1,5 +1,6 @@
 package com.example.OrderService.util;
 
+import com.example.OrderService.errors.OrderNotCreatedException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
@@ -15,6 +16,6 @@ public class ErrorsUtil {
                     .append(" - ").append(error.getDefaultMessage())
                     .append(";");
         }
-        throw new OrderNotCreatedException(errorMsg.toString());
+        throw new OrderNotCreatedException();
     }
 }
